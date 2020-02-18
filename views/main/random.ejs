@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <%- include("../partial/header") %>
+  </head>
+  <body>
+    <% user["results"].forEach(person =>{ %>
+    <li>
+      <% const name = person.name.first + " " + person.name.last %>
+      <img src="<%= person.picture.medium %>" />
+
+      <%= name %>
+    </li>
+    <% }) %>
+  </body>
+  <footer>
+    <%- include("../partial/footer") %>
+  </footer>
+</html>
